@@ -20,8 +20,7 @@ public class EjercicioObligatorio {
 		System.out.print("Número de matrices: ");
 		matrices=sc.nextInt();
 		
-		
-//		matriz mat=new matriz(filas,columnas,matrices);
+		System.out.println("");
 		
 		matriz[] mat=new matriz[matrices];
 		for (i=0;i<matrices;i++) {
@@ -29,7 +28,20 @@ public class EjercicioObligatorio {
 		}
 		
 		for (i=0;i<mat.length;i++) {
+			System.out.println("Matriz "+i+"\n");
 			mat[i].IntroduceDatosMatriz(filas, columnas, matrices);
+		}
+		
+		System.out.println("Mostrar todas las matrices introducidas: ");
+		
+		for (i=0;i<mat.length;i++) {
+			mat[i].MostrarMatriz();
+		}
+		
+		System.out.println("Sumar todas las matrices introducidas: ");
+		
+		for (i=0;i<mat.length;i++) {
+			mat[i].SumarMatriz();
 		}
 		
 		
