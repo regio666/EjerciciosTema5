@@ -42,8 +42,8 @@ public class matriz {
 		}
 		System.out.println("");
 	}
-	
-	public void SumarMatriz () {
+
+/*	public void SumarDosMatrices () {
 			
 			int i=0,y=0;
 			int[][] matrizResultado=new int[filas][columnas]; 
@@ -51,12 +51,28 @@ public class matriz {
 			for(i=0;i<matriz.length;i++) {
 				for(y=0;y<matriz[i].length;y++) {
 					matrizResultado[i][y]=matriz[i][y]+matriz[i][y];
-					System.out.print(matrizResultado);
+					System.out.print(matrizResultado[i][y]);
 				}
 				System.out.println("");
 			}
 			System.out.println("");
 		}
+*/
+		public int[][] SumarDosMatrices (int[][] matriz) {
 	
+	int i=0,y=0;
+	int[][] matrizResultado=new int[filas][columnas]; 
 	
+	for(i=0;i<matriz.length;i++) {
+		for(y=0;y<matriz[i].length;y++) {
+			matrizResultado[i][y]=matriz[i][y]+matriz[i][y];
+			System.out.print(matrizResultado[i][y]);
+		}
+		System.out.println("");
+	}
+	System.out.println("");
+	return matriz;
+	
+}
+
 }
