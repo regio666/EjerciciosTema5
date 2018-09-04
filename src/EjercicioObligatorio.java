@@ -10,7 +10,7 @@ public class EjercicioObligatorio {
 		int filas=0;
 		int columnas=0;
 		int matrices=0;
-		int i=0;
+		int i=0,y=0;
 		
 		Scanner sc=new Scanner(System.in);
 		
@@ -27,9 +27,6 @@ public class EjercicioObligatorio {
 		
 		matriz[] mat;
 		mat=new matriz[matrices];
-		
-		int[][] matriz = new int[filas][columnas];
-		matriz sumaMat= new matriz(filas, columnas);
 		
 		for (i=0;i<matrices;i++) {
 			mat[i]=new matriz(filas,columnas);
@@ -49,10 +46,22 @@ public class EjercicioObligatorio {
 			
 		}
 		
-		System.out.println("Suma de todas las matrices introducidas: ");
+		int[][] resultado = new int[filas][columnas];
 		
-			sumaMat.SumarDosMatrices(matriz);
-	
+		
+		
+		for (i=0;i<mat.length;i++) {
+			mat[i].SumarDosMatrices(resultado);
+		}
+		
+		System.out.println("Suma de todas las matrices introducidas: ");	
+		for(i=0;i<resultado.length;i++) {
+			for(y=0;y<resultado[i].length;y++) {
+				System.out.print(" "+resultado[i][y]);
+				
+			}
+			System.out.println("");
+		}
 		
 		
 	}

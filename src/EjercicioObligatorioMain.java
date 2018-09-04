@@ -2,15 +2,13 @@ import java.util.*;
 
 public class EjercicioObligatorioMain {
 
-	private static Scanner sc;
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		sc = new Scanner(System.in);
 		
-		int[][] resultado = new int[Array.filas][Array.columnas];
-
+		Scanner sc = new Scanner(System.in);
+		
 		System.out.print("Número de filas: ");
 		Array.filas=sc.nextInt();
 		
@@ -35,9 +33,12 @@ public class EjercicioObligatorioMain {
 	System.out.println("Mostrar todas las matrices introducidas: ");
 	
 		for (int i=0;i<Array.n;i++) {
+			
 			vector[i].MostrarMatriz();
 		
 		}
+		
+		int[][] resultado = new int[Array.filas][Array.columnas];
 		
 		for (int i=0;i<Array.n;i++) {
 			

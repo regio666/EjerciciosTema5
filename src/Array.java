@@ -11,8 +11,8 @@ public class Array {
 	
 	public Array(int row, int col) {
 		
-		Array.filas=row;
-		Array.columnas=col;
+		filas=row;
+		columnas=col;
 		matriz=new int[row][col];
 		
 	}
@@ -35,8 +35,8 @@ public void MostrarMatriz () {
 	
 	int i=0,y=0;
 	
-	for(i=0;i<matriz.length;i++) {
-		for(y=0;y<matriz[i].length;y++) {
+	for(i=0;i<filas;i++) {
+		for(y=0;y<columnas;y++) {
 			System.out.print(" "+matriz[i][y]);
 		}
 		System.out.println("");
@@ -44,22 +44,19 @@ public void MostrarMatriz () {
 	System.out.println("");
 }
 
-public int SumarDosMatrices (int[][] matriz) {
+public void SumarDosMatrices (int[][] matriz) {
 	
-	int z=0,x=0;
+	int i=0,y=0;
 	
-	int resultado=0;
-	
-	for(z=0;z<Array.filas;z++) {
-		for(x=0;x<Array.columnas;x++) {
-			resultado+=matriz[z][x];
-			System.out.print(" "+resultado);
+	for(i=0;i<Array.filas;i++) {
+		for(y=0;y<Array.columnas;y++) {
+			matriz[i][y]+=Array.matriz[i][y];
+			System.out.print(" "+matriz[i][y]);
 		}
 		System.out.println("");
 	}
 	System.out.println("");
-	return resultado;
-	
+		
 }
 	
 	

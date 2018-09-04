@@ -46,21 +46,17 @@ public class matriz {
 	}
 
 	
-public int SumarDosMatrices (int[][] matriz) {
+public void SumarDosMatrices (int[][] matriz) {
 		
-		int i=0,y=0;
-		
-		int suma=0;
-		
-		for(i=0;i<matriz.length;i++) {
-			for(y=0;y<matriz[i].length;y++) {
-				suma+=matriz[i][y];
-				System.out.print(" "+suma);
+				
+		for(int i=0;i<this.filas;i++) {
+			for(int y=0;y<this.columnas;y++) {
+				matriz[i][y]+=this.matriz[i][y];
+			
 			}
-			System.out.println("");
+			
 		}
-		System.out.println("");
-		return suma;
+				
 		
 	}	
 	
