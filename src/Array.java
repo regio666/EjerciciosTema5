@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class Array {
 
-	static int filas;
-	static int columnas;
-	static int n;
-	static int matriz[][];
+	private int filas;
+	private int columnas;
+	private int n;
+	private int matriz[][];
 		
 	Scanner sc=new Scanner(System.in);
 	
@@ -19,10 +19,8 @@ public class Array {
 	
 public void IntroduceDatosMatriz () {
 		
-		int i=0,y=0;
-		
-		for(i=0;i<filas;i++) {
-			for(y=0;y<columnas;y++) {
+		for(int i=0;i<filas;i++) {
+			for(int y=0;y<columnas;y++) {
 				System.out.print("Elemeto "+i+","+y+": ");
 				matriz[i][y]=sc.nextInt();
 			}
@@ -33,30 +31,24 @@ public void IntroduceDatosMatriz () {
 
 public void MostrarMatriz () {
 	
-	int i=0,y=0;
-	
-	for(i=0;i<filas;i++) {
-		for(y=0;y<columnas;y++) {
-			System.out.print(" "+matriz[i][y]);
+	for(int i=0;i<filas;i++) {
+		for(int y=0;y<columnas;y++) {
+			System.out.print(" "+this.matriz[i][y]);
 		}
 		System.out.println("");
 	}
 	System.out.println("");
 }
 
-public void SumarDosMatrices (int[][] matriz) {
+public int[][] SumarDosMatrices (int[][] matriz) {
 	
-	int i=0,y=0;
-	
-	for(i=0;i<Array.filas;i++) {
-		for(y=0;y<Array.columnas;y++) {
-			matriz[i][y]+=Array.matriz[i][y];
-			System.out.print(" "+matriz[i][y]);
+	for(int i=0;i<this.filas;i++) {
+		for(int y=0;y<this.columnas;y++) {
+			matriz[i][y]+=this.matriz[i][y];
 		}
-		System.out.println("");
+				
 	}
-	System.out.println("");
-		
+	return matriz;
 }
 	
 	

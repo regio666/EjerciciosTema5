@@ -3,49 +3,64 @@ import java.util.*;
 public class EjercicioObligatorioMain {
 
 	
+	private static Scanner sc;
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		int filas=0;
+		int columnas=0;
+		int n=0;
 		
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 		
 		System.out.print("Número de filas: ");
-		Array.filas=sc.nextInt();
+		filas=sc.nextInt();
 		
 		System.out.print("Número de columnas: ");
-		Array.columnas=sc.nextInt();
+		columnas=sc.nextInt();
 		
 		System.out.print("Número de matrices: ");
-		Array.n=sc.nextInt();
+		n=sc.nextInt();
 		
 		Array [] vector;
-		vector= new Array[Array.n];
+		vector= new Array[n];
 		
-		for(int i=0;i<Array.n;i++) {
+		for(int i=0;i<n;i++) {
 			
-			vector[i]=new Array(Array.filas,Array.columnas);
+			vector[i]=new Array(filas,columnas);
+			}
+			
+		for(int i=0;i<n;i++) {
+			
 			System.out.println("Matriz "+ (i+1)+"\n");
 			vector[i].IntroduceDatosMatriz();
 			System.out.println("");
 			}
 		
 		
-	System.out.println("Mostrar todas las matrices introducidas: ");
+	System.out.println("Mostramos todas las matrices introducidas: ");
 	
-		for (int i=0;i<Array.n;i++) {
+		for (int i=0;i<n;i++) {
 			
 			vector[i].MostrarMatriz();
 		
 		}
 		
-		int[][] resultado = new int[Array.filas][Array.columnas];
+		int[][] resultado = new int[filas][columnas];
 		
-		for (int i=0;i<Array.n;i++) {
-			
+		for (int i=0;i<n;i++) {
 			vector[i].SumarDosMatrices(resultado);
-		
 		}
 		
+		System.out.println("Suma de todas las matrices introducidas: ");	
+		for(int i=0;i<resultado.length;i++) {
+			for(int y=0;y<resultado[i].length;y++) {
+				System.out.print(" "+resultado[i][y]);
+				
+			}
+			System.out.println("");
+		}
 	
 	}
 }
